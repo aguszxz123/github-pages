@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition-all">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-6 text-center text-3xl font-bold shadow-md">
+        Web Profesional
+    </header>
+
+    <!-- Kontainer Utama -->
+    <div class="max-w-lg mx-auto mt-10 p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg text-center transition-all">
+        <h2 class="text-3xl font-bold">Selamat Datang!</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Ini adalah contoh website profesional tanpa animasi berlebihan.</p>
+        
+        <img src="https://via.placeholder.com/300" alt="Gambar Ilustrasi" class="mx-auto my-4 rounded-lg shadow-md">
+
+        <p class="text-gray-700 dark:text-gray-400">Klik tombol di bawah untuk melihat perubahan teks.</p>
+
+        <!-- Tombol Interaktif -->
+        <button onclick="ubahPesan()" class="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg transition-all">
+            Klik Saya
+        </button>
+
+        <!-- Pesan akan muncul di sini -->
+        <p id="pesan" class="mt-4 text-lg font-semibold text-red-500"></p>
+
+        <!-- Tombol Mode Gelap -->
+        <button onclick="toggleDarkMode()" class="mt-6 px-4 py-2 bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-900 font-bold rounded-lg shadow transition-all">
+            Toggle Dark Mode
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function ubahPesan() {
+            document.getElementById("pesan").innerText = "Tombol telah diklik!";
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+</body>
+</html>
